@@ -131,6 +131,6 @@ instead, cache is loaded on demand.
     - No unit tests, functional tests. The way to test right now is throgh the `diff_on` flag
     - No thorough custom excpetion and error code handling. Right now it only handles 404
     - build and run scripts only work on OSX
-    - Not a epxert on BASH script
+    - Not a expert on BASH script
     - Cache policy is very simple - no preload, only load on demand, simple cache expiration, every thing is in memory
  

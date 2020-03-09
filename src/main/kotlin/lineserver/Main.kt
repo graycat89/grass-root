@@ -30,7 +30,7 @@ fun Application.mainModule(args: Array<String>) {
     // run.sh sources it when starting the app
     val size = System.getenv("PARTITION_SIZE").toInt()
     val diffOn = System.getenv("DIFF_ON").toBoolean() // turning it on can impact performance
-    val partitionRoot = System.getProperty("PARTITION_ROOT", "/tmp")
+    val partitionRoot = System.getenv("PARTITION_ROOT")
 
     val cacheService = CacheService(partitionRoot, size)
     val cache: LoadingCache<Long, String?> = CacheBuilder.newBuilder()
