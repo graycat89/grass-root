@@ -24,10 +24,14 @@ import kotlin.system.measureTimeMillis
 
 @io.ktor.util.KtorExperimentalAPI
 fun Application.mainModule(args: Array<String>) {
-    val filename = args.first()
+    val filename = args.last()
+
+    // The environment variable are set in .env-local file by build.sh
+    // run.sh sources it when starting the app
     val size = System.getenv("PARTITION_SIZE").toInt()
-    val diffOn = System.getenv("DIFF_ON").toBoolean()
-    val partitionRoot = System.getProperty("PARTITION_ROOT", "/Users/mli/work/line-server/tmp")
+    val diffOn = System.getenv("DIFF_ON").toBoolean() // turning it on can impact performance
+    val partitionRoot = System.getProperty("PARTITION_ROOT", "/tmp")
+
     val cacheService = CacheService(partitionRoot, size)
     val cache: LoadingCache<Long, String?> = CacheBuilder.newBuilder()
             .maximumSize(1000)

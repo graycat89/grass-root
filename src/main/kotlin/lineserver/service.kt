@@ -7,6 +7,7 @@ import io.ktor.response.respondText
 import java.io.File
 import java.io.FileNotFoundException
 
+@io.ktor.util.KtorExperimentalAPI
 class LineService(val diffOn: Boolean = false, val compareList: List<String>, val partitionRoot: String, val partitionSize: Int, val cache: LoadingCache<Long, String?>) {
     suspend fun serveLine(call: ApplicationCall) {
         val index = call.parameters["index"]?.toLongOrNull() ?: throw NotFoundException("Probably index of out bound")
@@ -36,6 +37,9 @@ class CacheService(val partitionRoot: String, val partitionSize: Int) {
         val values = mutableListOf<String>()
 
         try {
+            // we can also return as soon as the requested line is found
+            // since the partition is not expect to be large
+            // it't ok to keep reading til the end of the partition and then return by localIndex
             file.forEachLine(Charsets.UTF_8) { line ->
                 values.add(line)
             }

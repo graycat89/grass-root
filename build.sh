@@ -1,12 +1,14 @@
 #! /bin/bash
 
 # the num of lines stored in each partition
-size=$1
-inputFile=$2
-diff_on=$3
+part_root=$1
+size=$2
+inputFile=$3
+diff_on=$4
 
 # set up environment variables
 echo "export PARTITION_SIZE=$size" > ./.env-local
+echo "export PARTITION_ROOT=$part_root" >> ./.env-local
 if [[ diff_on -eq 1 ]]
 then
     echo "set diff_on=true"
