@@ -1,0 +1,10 @@
+
+Business Consultants, Inc., Washington, DC 1990-1993
+
+* Provided technical consulting services to the Smithsonian Institute’s Information Technology Services Group, Amnesty International, and internal research and development initiatives.
+
+* Consolidated and documented the Smithsonian Laboratory's Testing, Demonstration, and Training databases onto a single server, maximizing the use of the laboratory's computing resources.
+
+* Brought the Smithsonian Laboratory on-line with the Internet.
+
+* Successfully integrated and delivered to Amnesty International an $80,000 HP 9000/750 Server consisting of 8 Gigabytes of disk space and 9 software systems that required extensive porting work and documentation.

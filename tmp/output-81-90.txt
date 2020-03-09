@@ -1,0 +1,10 @@
+
+* Interactive UNIX System V r4 (POSIX) System Administration; ETC, Inc.
+
+* Effective Briefing Techniques and Technical Presentations; William French and Associates, Inc.
+
+* Transmission Control Protocol/Internet Protocol (TCP/IP); Technology Systems Institute.
+
+* LAN Interconnection Using Bridges, Routers, and Gateways; Information Systems Institute.
+
+* OSI X.400/X.500 Messaging and Directory Service Protocols; Communication Technologies, Inc.
